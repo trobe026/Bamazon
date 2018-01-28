@@ -124,11 +124,21 @@ var manageInv = function() {
                 type: "input",
                 message: "Which item would you like to remove?",
                 name: "item"
+              },
+              {
+                type: "confirm",
+                message: "This will permanently remove all records of this product, are you sure?",
+                name: "confirm"
               }
             ])
             .then(function(resp) {
-              productName = resp.item;
-              deleteProduct();
+              if (resp.confirm) {
+                productName = resp.item;
+                deleteProduct();
+              } else {
+                doNext();
+              }
+
             });
               break;
 
@@ -137,98 +147,6 @@ var manageInv = function() {
             manageInv();
             break;
       }
-      // if (response.choice === 'Show Inventory.') {
-      //   listProducts();
-      // } else if (response.choice === 'Show Low Inventory.') {
-      //   listProductsLow();
-      //   inquirer.prompt([
-      //     {
-      //       type: "input",
-      //       message: "What is the name of your item?",
-      //       name: "item"
-      //     },
-      //     {
-      //       type: "input",
-      //       message: "Enter a starting bid:",
-      //       name: "bid"
-      //     }
-      //   ])
-      //   .then(function(resp) {
-      //     itemName = resp.item;
-      //     bidAmnt = resp.bid;
-      //     // console.log(itemName + bidAmnt);
-      //     addItem();
-      //   });
-      //
-      // } else if (response.choice === 'Increase Inventory.') {
-      //   inquirer.prompt([
-      //     {
-      //       type: "input",
-      //       message: "Which item would you like to bid on?",
-      //       name: "item"
-      //     },
-      //     {
-      //       type: "input",
-      //       message: "Enter your bid:",
-      //       name: "bid"
-      //     }
-      //   ])
-      //   .then(function(resp) {
-      //     itemName = resp.item;
-      //     bidAmnt = resp.bid;
-      //     placeBid();
-      //   });
-      //
-      // } else if (response.choice === 'Add New Product') {
-      //   inquirer.prompt([
-      //     {
-      //       type: "input",
-      //       message: "Enter Product Name:",
-      //       name: "product"
-      //     },
-      //     {
-      //       type: "input",
-      //       message: "Enter Department:",
-      //       name: "dept"
-      //     },
-      //     {
-      //       type: "input",
-      //       message: "What will this product cost?",
-      //       name: "price"
-      //     },
-      //     {
-      //       type: "input",
-      //       message: "How many in stock?",
-      //       name: "qty"
-      //     }
-      //   ])
-      //   .then(function(resp) {
-      //    productName = resp.product;
-      //    productDept = resp.dept;
-      //    price = resp.price;
-      //    qty = resp.qty;
-      //    addProduct();
-      //   });
-      //
-      // } else if (response.choice === 'Remove an item.') {
-      //   listItems();
-      //   // listitems();
-      //   inquirer.prompt([
-      //     {
-      //       type: "input",
-      //       message: "Which item would you like to remove?",
-      //       name: "item"
-      //     }
-      //   ])
-      //   .then(function(resp) {
-      //     itemName = resp.item;
-      //     deleteItem();
-      //   });
-      //
-      // } else if (response.choice === 'Exit Program\n') {
-      //   runProg = false;
-      //   manageInv();
-      // }
     });
   }
 };
