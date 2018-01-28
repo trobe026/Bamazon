@@ -1,6 +1,6 @@
 # Bamazon
 
-This is command line application built using Node.js and MySQL.  It utilizes the **_inquirer_** and **_cli-table2_** NPM packages to create user prompts, and interact with 'products' and 'departments' databases to simulate an online marketplace. Click the links below to view detailed documents with screenshots on how to use each app. Enjoy!
+This is a command line application built using Node.js and MySQL.  It utilizes the **_inquirer_** and **_cli-table2_** NPM packages to create user prompts, and interact with 'products' and 'departments' tables in a MySQL database to simulate an online marketplace. Click the links below to view detailed documents with screenshots on how to use each app. Enjoy!
 
 Instructions with screenshots for **bamazonCustomer.js**:
 https://docs.google.com/document/d/1aZ2keD4Y5_4FZO2nC4xFwyqs7EtQ5pnsPF--_f8ScjY/edit?usp=sharing
