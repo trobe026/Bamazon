@@ -5,7 +5,7 @@
 ##### Instructions with screenshots for **bamazonCustomer.js**:
 https://docs.google.com/document/d/1aZ2keD4Y5_4FZO2nC4xFwyqs7EtQ5pnsPF--_f8ScjY/edit?usp=sharing
 
-##### Instructions with screenshots for **bamazonManager.js**:
+ Instructions with screenshots for **bamazonManager.js**:
 https://docs.google.com/document/d/1TqQAwEBsb_Ux0kkRd7ZtoYWPunV7FORzdvHag1GTq1U/edit?usp=sharing
 
 ##### Instructions with screenshots for **bamazonSupervisor.js**:
